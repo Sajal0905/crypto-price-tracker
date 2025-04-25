@@ -1,0 +1,152 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.table-container {
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+  margin-bottom: 20px;
+}
+
+.crypto-table {
+  width: 100%;
+  border-collapse: collapse; 
+}
+
+.crypto-table th,
+.crypto-table td {
+  padding: 10px;
+  text-align: left;
+  word-wrap: break-word; 
+}
+
+.crypto-table th {
+  background-color: #f4f4f4;
+}
+
+
+.crypto-table td:nth-child(4),
+.crypto-table th:nth-child(4) {
+  padding-right: 20px; 
+}
+
+.crypto-table td:nth-child(5),
+.crypto-table th:nth-child(5) {
+  padding-left: 20px;
+}
+.crypto-table .logo {
+  width: 30px;  
+  height: 30px; 
+  object-fit: contain; 
+}
+.crypto-table .positive {
+  color: green;
+}
+
+.crypto-table .negative {
+  color: red;
+}
+.crypto-table .chart {
+  width: 70px;  
+  height: 50px; 
+  object-fit: contain; 
+}
+
+@media (max-width: 768px) {
+  .crypto-table th, .crypto-table td {
+    padding: 8px; 
+  }
+
+  
+  .crypto-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box; 
+    border-bottom: 1px solid #ddd;
+  }
+
+  .crypto-table td:nth-child(odd) {
+    background-color: #f9f9f9; 
+  }
+
+  .crypto-table td:nth-child(even) {
+    background-color: #fff;
+  }
+
+  .crypto-table th {
+    display: none; 
+  }
+
+  
+  .crypto-table td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    padding-right: 10px;
+    display: inline-block;
+  }
+}
